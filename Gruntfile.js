@@ -8,7 +8,7 @@ module.exports = function(grunt) {
                     src : ['css/less/*.less', 'js/*.js', 'js/classes/*.js', 'js/core/*.js', 'js/views/*.js']
                 },
                 options: {
-                    proxy: "localhost:63342/C_Holidays_Copy_Taskrunner/"
+                    proxy: "localhost:63342/C_Holidays_Copy_Taskrunner"
                 }
             }
         },
@@ -25,7 +25,7 @@ module.exports = function(grunt) {
         concat: {
             dist: {
                 src: ['js/classes/class.city.js', 'js/classes/class.hotel.js'],
-                dest: 'js/classes/mergedclasses.js',
+                dest: 'js/classes/classes.js',
             },
         },
 
@@ -39,11 +39,10 @@ module.exports = function(grunt) {
                 }]
             }
         },
-
         uglify: {
             my_target: {
                 files: {
-                    'js/testUglify.js': ['js/testuglify.js']
+                    'js/testUglify.js': ['js/classes/mergedclasses.js']
                 }
             }
         },
@@ -91,13 +90,12 @@ module.exports = function(grunt) {
             }
     });
 
-
     grunt.loadNpmTasks('grunt-prettify');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-htmlmin');
     grunt.loadNpmTasks('grunt-browser-sync');
     grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-contrib-uglify-es');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-less');

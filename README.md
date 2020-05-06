@@ -1,1 +1,11 @@
-# Übung für Advanced Frontend Techniques
+#Projekt mit Grunt
+
+* browserSync
+* less
+* concat
+* cssmin
+* uglify
+* watch
+* htmlmin
+* copy
+* prettify

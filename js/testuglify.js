@@ -1,1 +1,0 @@
-function getGetParameters(){var a=window.location.hash.substr(1).indexOf("?");if(-1!=a){return window.location.hash.substr(a+2).split("&").reduce(function(a,b){var c=b.split("=");return a[c[0]]=c[1],a},{})}return{}}
