@@ -25,7 +25,7 @@ module.exports = function(grunt) {
         concat: {
             dist: {
                 src: ['js/classes/class.city.js', 'js/classes/class.hotel.js'],
-                dest: 'js/classes/classes.js',
+                dest: 'js/classes/mergedclasses.js',
             },
         },
 
@@ -56,9 +56,9 @@ module.exports = function(grunt) {
                 tasks: ['less', 'cssmin'],
             },
         },
-        htmlmin: {                                     // Task
-            dist: {                                      // Target
-                options: {                                 // Target options
+        htmlmin: {
+            dist: {
+                options: {
                     removeComments: true,
                     collapseWhitespace: true
                 },
@@ -77,10 +77,10 @@ module.exports = function(grunt) {
         },
             prettify: {
                 options: {
-                    indent: 2,
+                    indent: 2, //Zeileneinzug
                     indent_char: ' ',
-                    wrap_line_length: 78,
-                    brace_style: 'expand',
+                    wrap_line_length: 90, //Umbruch
+                    brace_style: 'expand', //Einrückungen
                     unformatted: ['a', 'sub', 'sup', 'b', 'i', 'u']
                 },
                 one: {
